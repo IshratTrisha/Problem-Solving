@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    double H, M;
+    double a, b,c;
+    while(scanf("%lf:%lf", &H, &M)==2)
+    {
+        if(H==0 && M==0) break;
+
+        a = 30*H+M*0.50;
+        b = M*6;
+        c = a-b;
+
+        if(c<0)
+        {
+            c =c*-1;
+        }
+        if (c>180)
+        {
+            c =360-c;
+        }
+        printf("%.3lf\n", c);
+    }
+
+    return 0;
+}
