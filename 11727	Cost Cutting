@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    long long A, B, C;
+    int T, I;
+    scanf("%d", &T);
+
+    for(I=1; I<=T; I++)
+    {
+        scanf("%lld %lld %lld", &A, &B, &C);
+        if(A>=B && A<=C || A>=C && A<=B)
+        {
+            printf("Case %d: %lld\n", I, A);
+        }
+        else if(B>=C && B<=A || B>=A && B<=C)
+        {
+            printf("Case %d: %lld\n", I, B);
+        }
+        else if(C>=A  && C<=B || C>=B && C<=A)
+        {
+            printf("Case %d: %lld\n", I, C);
+        }
+    }
+    return 0;
+}
