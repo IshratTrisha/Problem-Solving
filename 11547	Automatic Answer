@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    long long n, i;
+    int t, result, result1, result2;
+
+    scanf("%d", &t);
+
+    for(i=1; i<=t; i++)
+    {
+        scanf("%lld", &n); //abs is the function to get absolute value;
+        n = abs ((((n * 63 + 7492) * 5 - 498)/10)%10); //567/9=63; 235/47=5;
+        printf("%lld\n", n); //to print 10th column num: divide by 10 & module by 10;
+    }
+    return 0;
+}
