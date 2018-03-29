@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a, i;
+    long long n, m, s;
+
+    scanf("%d", &a);
+    for(i=1; i<=a; i++)
+    {
+        scanf("%lld %lld", &n, &m);
+        s = (n/3)*(m/3);
+        printf("%lld\n", s);
+    }
+    return 0;
+}
