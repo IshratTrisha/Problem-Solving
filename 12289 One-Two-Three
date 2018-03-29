@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int n, i;
+    char input[7], c;
+
+    scanf("%d%c", &n, &c);
+
+    while(n--)
+    {
+        gets(input);
+        if(strlen(input)==5) printf("3\n");
+        else if(
+                (input[0]=='o' && input[1]=='n') ||
+                (input[0]=='o' && input[2]=='e') ||
+                (input[1]=='n' && input[2]=='e')
+               ) printf("1\n");
+
+        else printf("2\n");
+    }
+    return 0;
+}
