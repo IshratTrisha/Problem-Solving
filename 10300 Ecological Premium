@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, f, i, j;
+    long long animal, land, premium, sum;
+
+    scanf("%d", &n);
+
+    for(i=1; i<=n; i++)
+    {
+        sum=0;
+        scanf("%d", &f);
+        for(j=1; j<=f; j++)
+        {
+            scanf("%lld %lld %lld", &land, &animal, &premium);
+            sum = sum+(land*premium);
+        }
+        printf("%lld\n", sum);
+    }
+    return 0;
+}
