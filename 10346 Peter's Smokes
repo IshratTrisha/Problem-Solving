@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, k, m, j, l;
+
+    while(scanf("%d %d", &n, &k)==2 && k>1)
+    {
+
+    l=n;
+
+    while (n>=k)
+        {
+        m=n/k;
+        j=n%k;
+        l=l+m;
+
+        n=m+j; //assigning new value to n;
+
+    }
+    printf("%d\n", l);
+    }
+    return 0;
+}
