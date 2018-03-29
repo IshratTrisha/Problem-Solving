@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int c, n, m[1001];
+    int i, j, k;
+    double avg, result, sum, abv;
+
+    scanf("%d", &c);
+
+    for(i=1; i<=c; i++)
+    {
+        sum = 0;
+        abv=0;
+        avg=0;
+
+        scanf("%d", &n);
+
+        for(j=0; j<n; j++)
+        {
+            scanf("%d", &m[j]);
+            sum = sum+m[j];
+        }
+
+        avg = sum/n;
+
+        for(k=0; k<n; k++)
+        {
+            if (m[k]>avg)
+            {
+                abv= abv+1;
+            }
+        }
+
+            result = abv*100/(double)n;
+       printf("%.3lf%%\n", result);
+    }
+
+    return 0;
+}
