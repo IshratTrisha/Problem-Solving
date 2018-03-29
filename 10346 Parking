@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int t, n, sum, min, max=0;
+    scanf("%d", &t);
+    int i, j, s[100];
+
+    for(i=1; i<=t; i++)
+    {
+        scanf("%d", &n);
+        max=0;
+        min=99;
+        for(j=1; j<=n; j++)
+        {
+            scanf("%d", &s[j]);
+        if(s[j]>max) max=s[j];
+        if(s[j]<min) min=s[j];
+        sum = max-min;
+        }
+
+        printf("%d\n", sum*2);
+    }
+    return 0;
+}
