@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int t, i, n, hj, lj;
+    int first, rec, count =1;
+
+    scanf("%d", &t);
+
+    while(t--)
+    {
+        scanf("%d", &n);
+        scanf("%d", &first);
+
+        hj=lj=0;
+        for(i=1; i<n; i++)
+        {
+            scanf("%d", &rec);
+            if(rec>first) hj++;
+            if(rec<first) lj++;
+
+            first = rec;
+        }
+        printf("Case %d: %d %d\n", count++, hj, lj);
+
+    }
+
+    return 0;
+}
