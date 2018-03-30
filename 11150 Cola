@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, a, b, c;
+
+    while(scanf("%d", &n)==1)
+    {
+        c=n;
+        while(n>=3)
+        {
+        a = n/3;
+        b = n%3;
+
+        c = c+a;
+
+        n =  a+b;
+        }
+        if (n==2) printf("%d\n", (c+1));
+        else printf("%d\n", c);
+    }
+    return 0;
+}
