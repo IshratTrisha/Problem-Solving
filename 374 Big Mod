@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+
+int main()
+{
+    long long b, p, m, result, power, x;
+
+    while(scanf("%lld %lld %lld", &b, &p, &m)==3)
+    {
+         x=1;
+       while(p)
+       {
+           if(p%2) x = (x*b)%m;
+           b = (b*b)%m;
+
+           p = p/2;
+       }
+       printf("%lld\n", x);
+    }
+
+
+    return 0;
+}
